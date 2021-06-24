@@ -1,5 +1,76 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div id="about">
+        <Sub-title v-bind:title="title"></Sub-title>
+        <Process />
+        <h2 class="eng">Feature</h2>
+        <Feature />
+        <h2 class="eng">Team</h2>
+        <Team />
+        <Slide />
+        <h2 class="eng">Career</h2>
+        <Career />
+        <h2 class="eng">Place</h2>
+        <Place />
+    </div>
 </template>
+
+<script>
+import SubTitle from "../components/SubTitle.vue";
+import Process from "../components/Process.vue";
+import Feature from "../components/Feature.vue";
+import Team from "../components/Team.vue";
+import Slide from "../components/Slide.vue";
+import Career from "../components/Career.vue";
+import Place from "../components/Place.vue";
+export default {
+    components: {
+        SubTitle,
+        Process,
+        Feature,
+        Team,
+        Slide,
+        Career,
+        Place,
+    },
+    data() {
+        return {
+            title: "당신의 소중한 공간을<br /><span>재창조</span> 합니다.",
+            svg: "",
+        };
+    },
+};
+</script>
+
+<style lang="scss">
+#about {
+    width: 100%;
+}
+h2 {
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: #114b9b;
+}
+
+.adsSlide {
+    width: 100vw;
+    padding: 24px;
+    margin-bottom: 280px;
+    background: #114b9b;
+
+    ul {
+        display: flex;
+        overflow: hidden;
+        li {
+            margin-right: 100px;
+            font-size: 18px;
+            color: #fff;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+</style>
