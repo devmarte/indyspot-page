@@ -16,15 +16,16 @@ export default {};
 <style lang="scss">
 .adsSlide {
     width: 100vw;
-    padding: 24px;
     margin-bottom: 280px;
     background: #114b9b;
+    overflow: hidden;
 
     ul {
-        display: flex;
+        width: 1024px;
         overflow: hidden;
         li {
-            margin-right: 100px;
+            float: left;
+            margin-right: 40px;
             font-size: 18px;
             color: #fff;
 
@@ -32,6 +33,21 @@ export default {};
                 margin-right: 0;
             }
         }
+        ul:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .adsSlide {
+        margin-bottom: 160px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .adsSlide {
+        margin-bottom: 120px;
     }
 }
 </style>

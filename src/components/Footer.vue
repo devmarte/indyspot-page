@@ -24,4 +24,17 @@ export default {};
         padding: 48px 0;
     }
 }
+
+@media screen and (max-width: 1280px) {
+    .footer {
+        .footerWrap {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .footer {
+        height: 160px;
+    }
+}
 </style>

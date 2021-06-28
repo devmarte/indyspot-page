@@ -53,7 +53,8 @@ export default {
     .wrap {
         display: flex;
         flex-wrap: wrap;
-        width: 1060px;
+        width: 100%;
+        max-width: 1060px;
         margin: 0 auto;
 
         .profile {
@@ -90,6 +91,37 @@ export default {
                 line-height: 1.5;
                 font-size: 16px;
                 color: #656565;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .team {
+        .wrap {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .profile {
+                width: auto;
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .team {
+        .wrap {
+            .profile {
+                margin-bottom: 44px;
+                .pic {
+                    margin-bottom: 12px;
+                }
+                .name {
+                    font-size: 16px;
+                }
+                .description {
+                    font-size: 14px;
+                }
             }
         }
     }

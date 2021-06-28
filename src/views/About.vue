@@ -53,24 +53,15 @@ h2 {
     color: #114b9b;
 }
 
-.adsSlide {
-    width: 100vw;
-    padding: 24px;
-    margin-bottom: 280px;
-    background: #114b9b;
+@media screen and (max-width: 720px) {
+    h2 {
+        margin-bottom: 64px;
+    }
+}
 
-    ul {
-        display: flex;
-        overflow: hidden;
-        li {
-            margin-right: 100px;
-            font-size: 18px;
-            color: #fff;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+@media screen and (max-width: 375px) {
+    h2 {
+        margin-bottom: 44px;
     }
 }
 </style>

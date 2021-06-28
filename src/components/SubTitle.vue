@@ -32,4 +32,19 @@ export default {
 .shorten {
     margin-bottom: 48px;
 }
+
+@media screen and (max-width: 1024px) {
+    .sub-title {
+        margin-bottom: 80px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .sub-title {
+        margin-bottom: 40px;
+        padding: 20px 32px;
+        p {
+            font-size: 20px;
+        }
+    }
+}
 </style>

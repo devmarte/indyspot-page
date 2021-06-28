@@ -63,4 +63,29 @@ export default {
         }
     }
 }
+@media screen and (max-width: 1440px) {
+    .paraWrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .place {
+        padding: 0 20px;
+        margin-bottom: 160px;
+        #map {
+            margin-bottom: 64px;
+        }
+        .paraWrap {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
 </style>

@@ -59,7 +59,8 @@ export default {
 .wrap {
     display: flex;
     flex-wrap: wrap;
-    width: 1060px;
+    width: 100%;
+    max-width: 1060px;
     margin: 0 auto 280px;
 
     .posNav {
@@ -125,6 +126,93 @@ export default {
 
                 &:hover {
                     color: #ffaa0d;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .posNav {
+            margin-right: 0;
+            padding-top: 0;
+
+            ul {
+                display: flex;
+            }
+        }
+        .detail {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    @media screen and (max-width: 760px) {
+        .wrap {
+            .posNav {
+                width: auto;
+            }
+            .detail {
+                width: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .wrap {
+            margin-bottom: 180px;
+            .posNav {
+                padding: 0;
+                ul {
+                    li {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .detail {
+                p {
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .wrap {
+        margin-bottom: 120px;
+        .posNav {
+            padding: 0;
+            ul {
+                li {
+                    padding: 12px 16px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .detail {
+            p {
+                font-size: 14px;
+            }
+
+            img {
+                width: 100%;
+            }
+            .btn-container {
+                div {
+                    justify-content: start;
                 }
             }
         }

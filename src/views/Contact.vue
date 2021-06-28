@@ -23,6 +23,11 @@
                 </div>
                 <button>보내기</button>
             </div>
+            <p>{{ usrName }}</p>
+            <br />
+            <p>{{ usrMethod }}</p>
+            <br />
+            <p>{{ usrText }}</p>
         </div>
     </div>
 </template>
@@ -102,6 +107,40 @@ export default {
                 }
                 &:active {
                     background: #063e8e;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #contact {
+        .form-container {
+            justify-content: center;
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #contact {
+        .form-container {
+            padding: 0 20px;
+            .form {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    #contact {
+        .form-container {
+            .form {
+                .form-top {
+                    input {
+                        width: 100%;
+                    }
                 }
             }
         }

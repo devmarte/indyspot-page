@@ -47,7 +47,8 @@ export default {
         width: 400px;
         margin-right: 40px;
         .item-img {
-            width: 260px;
+            width: 100%;
+            max-width: 260px;
             height: 260px;
             margin: 0 auto 34px;
             border: 1px solid #ccc;
@@ -66,6 +67,54 @@ export default {
         }
         &:last-of-type {
             margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .process {
+        flex-direction: column;
+        align-items: center;
+
+        .item {
+            margin-right: 0;
+            margin-bottom: 100px;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .process {
+        margin-bottom: 160px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .process {
+        .item {
+            width: auto;
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .process {
+        margin-bottom: 120px;
+        .item {
+            margin-bottom: 64px;
+            .item-img {
+                max-width: 160px;
+                height: 160px;
+                margin-bottom: 16px;
+            }
+            .item-title {
+                font-size: 18px;
+            }
+            .item-paragraph {
+                font-size: 14px;
+            }
         }
     }
 }

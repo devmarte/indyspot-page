@@ -112,4 +112,70 @@ export default {
         flex-direction: row-reverse;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        .feature {
+            padding: 0 40px;
+
+            .item {
+                .img {
+                    height: 180px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .feature {
+        margin-bottom: 160px;
+
+        .item {
+            flex-direction: column;
+            align-items: center;
+            .img {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        .feature {
+            padding-left: 0;
+            padding-right: 0;
+
+            .item {
+                .description {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        .feature {
+            margin-bottom: 120px;
+            .item {
+                margin-bottom: 44px;
+                .img {
+                    margin-bottom: 12px;
+                }
+                .description {
+                    .title {
+                        font-size: 18px;
+                    }
+                    .paragraph {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>
