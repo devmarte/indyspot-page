@@ -1,5 +1,6 @@
 <template>
     <div id="about">
+        <!-- 고화질해상도, 빠른 합리적인 가격 -->
         <Sub-title v-bind:title="title"></Sub-title>
         <Process />
         <h2 class="eng">Feature</h2>
