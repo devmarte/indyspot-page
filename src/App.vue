@@ -29,9 +29,9 @@
             </div>
         </div>
 
-        <!-- <div id="wrapper"> -->
-        <router-view class="contents" />
-        <!-- </div> -->
+        <transition name="fade" mode="out-in">
+            <router-view class="contents" />
+        </transition>
         <Footer />
     </div>
 </template>
@@ -140,6 +140,7 @@ export default {
             padding-bottom: 180px;
             transform: translate(-50%, -50%);
             background: #fff;
+            z-index: 99;
             a {
                 font-size: 2.5rem;
                 padding: 12px 0;
@@ -172,7 +173,7 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.5s;
+    transition: opacity 0.8s ease;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;

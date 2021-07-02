@@ -1,44 +1,37 @@
 <template>
     <div class="adsSlide">
-        <ul>
-            <li>#직무관련_자기개발</li>
-            <li>#월요일_식사는_맛집투어</li>
-            <li>#칼퇴가_아닌_정시_퇴근</li>
-            <li>#서로의_취미생활_독려</li>
-        </ul>
+        <marquee-text class="texts">
+            #직무관련자기개발&nbsp; &nbsp; &nbsp; #월요일식사는맛집투어&nbsp;
+            &nbsp; &nbsp; #칼퇴가아닌정시퇴근 &nbsp; &nbsp; &nbsp;
+            #서로의취미생활독려&nbsp; &nbsp; &nbsp; #직무관련자기개발 &nbsp;
+            &nbsp; &nbsp; #월요일식사는맛집투어&nbsp; &nbsp; &nbsp;
+            #칼퇴가아닌정시퇴근 &nbsp; &nbsp; &nbsp; #서로의취미생활독려&nbsp;
+            &nbsp; &nbsp;
+        </marquee-text>
     </div>
 </template>
 
 <script>
-export default {};
+import MarqueeText from "vue-marquee-text-component";
+
+export default {
+    components: {
+        MarqueeText,
+    },
+};
 </script>
 
 <style lang="scss">
 .adsSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     margin-bottom: 280px;
     background: #114b9b;
     overflow: hidden;
-
-    ul {
-        width: 1024px;
-        overflow: hidden;
-        li {
-            float: left;
-            margin-right: 40px;
-            font-size: 18px;
-            color: #fff;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-        ul:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-    }
+    padding: 2rem 0;
+    color: #fff;
 }
 @media screen and (max-width: 425px) {
     .adsSlide {
