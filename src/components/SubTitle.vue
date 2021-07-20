@@ -18,8 +18,12 @@ export default {
 <style lang="scss">
 .sub-title {
     width: 100%;
+    margin-top: 48px;
     margin-bottom: 280px;
     padding: 80px 110px;
+    border: 1px solid #efefef;
+    border-radius: 14px;
+    box-shadow: 2px 4px 4px 0px rgb(246, 246, 246);
     font-size: 26px;
     color: #656565;
     line-height: 39px;
@@ -30,7 +34,7 @@ export default {
     }
 }
 .shorten {
-    margin-bottom: 48px;
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1024px) {

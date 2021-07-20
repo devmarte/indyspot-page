@@ -12,6 +12,7 @@
         <Career />
         <h2 class="eng">Place</h2>
         <Place />
+        <!-- <Footer /> -->
     </div>
 </template>
 
@@ -23,6 +24,7 @@ import Team from "../components/Team.vue";
 import Slide from "../components/Slide.vue";
 import Career from "../components/Career.vue";
 import Place from "../components/Place.vue";
+// import Footer from "../components/Footer.vue";
 export default {
     components: {
         SubTitle,
@@ -32,6 +34,7 @@ export default {
         Slide,
         Career,
         Place,
+        // Footer,
     },
     data() {
         return {

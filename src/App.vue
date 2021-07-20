@@ -7,24 +7,26 @@
                 /></router-link>
             </h1>
             <div class="items">
-                <router-link to="/" class="eng">About</router-link>
+                <router-link to="/" class="eng">Home</router-link>
+                <router-link to="/about" class="eng">About</router-link>
                 <router-link to="/works" class="eng">Works</router-link>
                 <router-link to="/contact" class="eng">Contact</router-link>
             </div>
 
-            <transition name="fade">
-                <div class="itemsRes" v-if="isToggle">
-                    <router-link to="/" class="eng">About</router-link>
+            <transition>
+                <div :class="{ resTrue: isMenuOpen }" class="itemsRes">
+                    <router-link to="/" class="eng">Home</router-link>
+                    <router-link to="/about" class="eng">About</router-link>
                     <router-link to="/works" class="eng">Works</router-link>
                     <router-link to="/contact" class="eng">Contact</router-link>
 
-                    <div class="closeBtn" v-on:click="toggleMenu">
-                        <span>X</span>
+                    <div class="closeBtn" v-on:click="openMenu(false)">
+                        <span>✖︎</span>
                     </div>
                 </div>
             </transition>
 
-            <div class="burger" v-on:click="toggleMenu">
+            <div class="burger" v-on:click="openMenu(true)">
                 <img src="./assets/burger.png" alt="" />
             </div>
         </div>
@@ -40,22 +42,22 @@ import Footer from "./components/Footer.vue";
 export default {
     data() {
         return {
-            isToggle: false,
+            isMenuOpen: false,
         };
     },
     components: {
         Footer,
     },
     methods: {
-        toggleMenu: function () {
-            this.isToggle = !this.isToggle;
-            console.log(this.isToggle);
+        openMenu: function (isOpen) {
+            this.isMenuOpen = isOpen;
+            console.log(this.isMenuOpen);
         },
     },
     watch: {
         $route(to, from) {
             if (to.path != from.path) {
-                this.toggleMenu();
+                this.openMenu();
             }
         },
     },
@@ -85,8 +87,10 @@ export default {
     justify-content: space-between;
     width: 100%;
     padding: 24px 40px;
+    background: #fff;
 
     .items {
+        line-height: 37px;
         a {
             font-size: 14px;
             margin-right: 64px;
@@ -127,7 +131,7 @@ export default {
         .items {
             display: none;
         }
-        .itemsRes {
+        .itemsRes.resTrue {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -141,6 +145,7 @@ export default {
             transform: translate(-50%, -50%);
             background: #fff;
             z-index: 99;
+            animation: doResNav 0.3s;
             a {
                 font-size: 2.5rem;
                 padding: 12px 0;
@@ -151,7 +156,6 @@ export default {
                     color: #114b9b;
                 }
             }
-
             .closeBtn {
                 position: absolute;
                 top: 32px;
@@ -177,5 +181,14 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
+}
+
+@keyframes doResNav {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 </style>

@@ -4,7 +4,7 @@
         <div class="paraWrap">
             <p>
                 경기도 용인시 수지구 죽전로 152, 단국대학교 글로컬산학협력관
-                202호<br />
+                213호<br />
                 우)18751 070 7518 3600<br />
                 indyspot.kr@gmail.com
             </p>
@@ -35,7 +35,7 @@ export default {
             const script = document.createElement("script"); /* global kakao */
             script.onload = () => kakao.maps.load(this.initMap);
             script.src =
-                "http://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=5c5735b57aa53a4f48f6ca08edd33a54";
+                "//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=5c5735b57aa53a4f48f6ca08edd33a54";
             document.head.appendChild(script);
         },
     },

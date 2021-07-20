@@ -38,7 +38,12 @@ export default {
                 {
                     pic: "",
                     name: "이시욱 | <span>연구원</span>",
-                    description: "나초 마싯썽",
+                    description: "자기소개",
+                },
+                {
+                    pic: "",
+                    name: "전민호 | <span>연구원</span>",
+                    description: "자기소개",
                 },
             ],
         };

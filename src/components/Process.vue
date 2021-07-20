@@ -2,7 +2,10 @@
     <div class="container">
         <div class="process">
             <div v-for="(item, idx) in items" :key="idx" class="item">
-                <div class="item-img"></div>
+                <div
+                    class="item-img"
+                    v-bind:style="{ backgroundImage: item.img }"
+                ></div>
                 <p class="item-title">{{ item.title }}</p>
                 <p class="item-paragraph">{{ item.itemParagraph }}</p>
             </div>
@@ -16,19 +19,19 @@ export default {
         return {
             items: [
                 {
-                    img: "",
+                    img: "url(https://cdn.pixabay.com/photo/2017/09/05/12/20/business-2717427_1280.jpg)",
                     title: "제작 상담",
                     itemParagraph:
                         "고객이 원하는 최종 결과물의 납품형태와 규모에 따라 계약서 작성 또는 출장비 선지급 요청 안내 진행 촬영 장소 정보를 전달 받고, 촬영 및 작업물 납품 일정 등을 조율",
                 },
                 {
-                    img: "",
+                    img: "url(https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_1280.jpg)",
                     title: "제작 의뢰",
                     itemParagraph:
                         "계약작성 또는 출장비 선 지급 이후에 촬영 일정과 시간을 협의하여 촬영 진행",
                 },
                 {
-                    img: "",
+                    img: "url(https://cdn.pixabay.com/photo/2014/05/02/21/46/office-336368_1280.jpg)",
                     title: "제작 납품",
                     itemParagraph:
                         "LOOK360 온라인 VR 플랫폼을 이용하여 납품할 경우 결과물을 확인할 수 있는 고유 url링크를 공유하며 활용 방법 안내 납품 형태가 소스 전달일 경우에 결과물을 압축하여 전달",
@@ -46,13 +49,30 @@ export default {
     .item {
         width: 400px;
         margin-right: 40px;
+        transform: translateY(20%);
+        opacity: 0;
+
+        &:nth-of-type(1) {
+            animation: itemUp 0.8s ease-in forwards;
+        }
+        &:nth-of-type(2) {
+            animation: itemUp 0.8s ease-in forwards;
+            animation-delay: 0.2s;
+        }
+        &:nth-of-type(3) {
+            animation: itemUp 0.8s ease-in forwards;
+            animation-delay: 0.4s;
+        }
         .item-img {
             width: 100%;
             max-width: 260px;
             height: 260px;
             margin: 0 auto 34px;
-            border: 1px solid #ccc;
+            // border: 1px solid #ccc;
             border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         .item-title {
             padding-bottom: 20px;
@@ -116,6 +136,17 @@ export default {
                 font-size: 14px;
             }
         }
+    }
+}
+
+@keyframes itemUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 </style>

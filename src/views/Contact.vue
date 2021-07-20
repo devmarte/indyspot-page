@@ -17,26 +17,29 @@
                         name="textbox"
                         id=""
                         cols="30"
-                        rows="10"
+                        rows="15"
                         placeholder="글을 입력하세요."
                     ></textarea>
                 </div>
                 <button>보내기</button>
             </div>
-            <p>{{ usrName }}</p>
+            <!-- <p>{{ usrName }}</p>
             <br />
             <p>{{ usrMethod }}</p>
             <br />
-            <p>{{ usrText }}</p>
+            <p>{{ usrText }}</p> -->
         </div>
+        <!-- <Footer /> -->
     </div>
 </template>
 
 <script>
+// import Footer from "../components/Footer.vue";
 import SubTitle from "../components/SubTitle.vue";
 export default {
     components: {
         SubTitle,
+        // Footer,
     },
     data() {
         return {
@@ -57,15 +60,15 @@ export default {
     .form-container {
         display: flex;
         width: 100%;
-        max-width: 1280px;
-        padding-right: 180px;
-        justify-content: flex-end;
+        justify-content: center;
         margin-bottom: 80px;
 
         .form {
             display: flex;
             flex-direction: column;
-            width: 400px;
+            padding: 0 20px;
+            width: 100%;
+            max-width: 1280px;
             .form-top {
                 display: flex;
                 margin-bottom: 16px;
@@ -73,7 +76,7 @@ export default {
                     flex: 1;
                     border: none;
                     border-bottom: 2px solid #cacaca;
-                    padding: 6px;
+                    padding: 16px;
                     margin-right: 8px;
 
                     &:last-of-type {
@@ -84,7 +87,7 @@ export default {
             .form-bottom {
                 textarea[name="textbox"] {
                     width: 100%;
-                    padding: 6px;
+                    padding: 16px;
                     border: 2px solid #cacaca;
                     border-radius: 8px;
                     box-sizing: border-box;
